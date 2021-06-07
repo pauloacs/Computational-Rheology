@@ -1,4 +1,0 @@
-icoFoam_A.C
-
-EXE = $(FOAM_USER_APPBIN)/icoFoam_collins
-
