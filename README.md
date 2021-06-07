@@ -9,8 +9,11 @@ SOLVERS:
 3- Assuming A=lambda*D with further mathematical simplifications
 
 4- Using eigen decompotion on D (deformation rate tensor) to obtain the eigen vectors as the principal directions
+
   i - Numerically solving principal deformations dif. equation
+  
   ii - Approx analytical solution to the evolution of principal deformations
+  
     a)  ..
     b) incremental
 
