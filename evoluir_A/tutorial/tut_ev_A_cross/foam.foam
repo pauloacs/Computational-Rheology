@@ -1,2 +1,0 @@
-mpirun -np 4 icoFoam_resolver_3 -parallel > log.ico&
-
