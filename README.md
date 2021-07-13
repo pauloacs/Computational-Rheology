@@ -16,23 +16,29 @@ b) With kernel transformation
 
 solver:
 
-2- Evolution of the eigen values and eigen vectors of the conformation matrix - Here various considerations have been tested.
+2- Evolution of the eigen values and eigen vectors of the conformation matrix - 
+This whole approach was encouraged by Collin's and Va in (ref). The proposed implementations such as various other implementations were considered. 
 
 1- Collins'_method_exp - Method from "Numerical approach to simulating turbulent flow of a viscoelastic polymer solution" by T. Vaithianathan and Lance R. Collins with exponential kernel transformation
+solver:
 
 2- Collins' approach
+solver:
 
 3- Assuming A=lambda*D with further mathematical simplifications
+solver:
 
 4- Using eigen decompotion on D (deformation rate tensor) to use the eigen vectors as the principal directions
 
   i - Numerically solving principal deformations dif. equation
+   solver:
   
   ii - Approx analytical solution to the evolution of principal deformations
-  
+  solver:
     a)  ..
     b) incremental
 
 6 - 
+solver:
 
 Tutorials are presented to test every solver. 
