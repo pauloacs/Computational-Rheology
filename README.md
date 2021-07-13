@@ -35,5 +35,9 @@ solver:
 ## 4 - Eigen Vectores extracted from deformation rate tensor
 solver:
 ## 5 - Direct presciption of the conformation matrix - A.
+ 
+    ### i) Linear identity : 
+    
+    ### ii) Quadratic identity : 
 
 Tutorials are presented to test every solver. 
