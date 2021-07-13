@@ -36,7 +36,7 @@ solver:
 solver:
 ## 5 - Direct presciption of the conformation matrix - A.
  
-    ### i) Linear identity : 
+    ##### i) Linear identity : 
     
     ### ii) Quadratic identity : 
 
