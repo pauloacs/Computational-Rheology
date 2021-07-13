@@ -35,4 +35,4 @@ solver:
 
 6 - 
 
-Tutorials:
+Tutorials are presented to test every solver. 
