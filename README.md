@@ -15,7 +15,7 @@ The spatial and temporal evolution of the conformation matrix can be given by th
 solver: 
 ## b) With kernel transformation
 Applying a kernel transformation as  and being <img src="https://latex.codecogs.com/svg.image?\Theta&space;=&space;\ln(A)=U\ln(\Lambda)U^{T}" title="\Theta = \ln(A)=U\ln(\Lambda)U^{T}" />, the following equation defines the evolution of \Theta:
-<img src="https://latex.codecogs.com/svg.image?\begin{align}\frac{D&space;\Theta&space;}{Dt}&space;=&space;\Omega&space;\Theta&space;-&space;\Theta&space;\Omega&space;&plus;2B&plus;&space;\frac{&space;e^{-\Theta}&space;-&space;I&space;}{\lambda}&space;\end{align}" title="\begin{align}\frac{D \Theta }{Dt} = \Omega \Theta - \Theta \Omega +2B+ \frac{ e^{-\Theta} - I }{\lambda} \end{align}" />
+      <img src="https://latex.codecogs.com/svg.image?\frac{D&space;\Theta&space;}{Dt}&space;=&space;\Omega&space;\Theta&space;-&space;\Theta&space;\Omega&space;&plus;2B&plus;&space;\frac{e^{-\Theta}&space;-&space;&space;I&space;}{\lambda}" title="\frac{D \Theta }{Dt} = \Omega \Theta - \Theta \Omega +2B+ \frac{e^{-\Theta} - I }{\lambda}" />
 
 solver:
 
