@@ -36,8 +36,13 @@ solver:
 solver:
 ## 5 - Direct presciption of the conformation matrix - A.
  
-    ##### i) Linear identity : 
+    ###### i) Linear identity : <img src="https://latex.codecogs.com/svg.image?A=2&space;\lambda&space;D" title="A=2 \lambda D" />
+    For this identity 
     
-    ### ii) Quadratic identity : 
+    ###### ii) Quadratic identity : <img src="https://latex.codecogs.com/svg.image?A=2&space;\lambda&space;D&space;&plus;&space;(2\lambda)^{2}DD" title="A=2 \lambda D + (2\lambda)^{2}DD" />
+    
+    ###### iii) Cubic identity :   <img src="https://latex.codecogs.com/svg.image?A=2&space;\lambda&space;D&space;&plus;&space;(2\lambda)^{3}DDD" title="A=2 \lambda D + (2\lambda)^{3}DDD" />
+    
+    ###### iv) Identity with convection: <img src="https://latex.codecogs.com/svg.image?&space;A=2&space;\lambda&space;D&space;&plus;&space;(5\lambda)^{2}(u\cdot&space;\triangledown&space;)(D)" title=" A=2 \lambda D + (5\lambda)^{2}(u\cdot \triangledown )(D)" />
 
 Tutorials are presented to test every solver. 
