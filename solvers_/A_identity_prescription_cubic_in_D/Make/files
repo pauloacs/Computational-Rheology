@@ -1,3 +1,0 @@
-A_identity_nonlinear.C
-
-EXE = $(FOAM_USER_APPBIN)/A_identity_nonlinear_TRI

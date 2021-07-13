@@ -1,3 +1,0 @@
-icoFoam_A.C
-
-EXE = $(FOAM_USER_APPBIN)/analytical_conv_T
