@@ -1,7 +1,7 @@
 # Computational-Rheology
 
 Here some solvers in OpenFOAM able to simulate viscoelastic fluids are presented. This implementations were done in v7 of OpenFOAM. In order to use some convective schemes and boundary conditions not typically present in openFOAM, in each solver in the file Make/options some files from ... are included. 
-It is possible to compile most of the solvers by removing this, but the convective schemes in system/fvSchemes and the boundary conditions for tau_p must be changed in the tutoriais. 
+It is possible to compile most of the solvers by removing this, but the convective schemes in system/fvSchemes and the boundary conditions for tau_p must be changed in the tutoriais, but in order for the simulations to give the best results, rheoTool must be installed in openfoam 7. 
 
 The solvers are divided in 2 batches:
 
