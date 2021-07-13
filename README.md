@@ -1,6 +1,15 @@
 # Computational-Rheology
 
-SOLVERS:
+Here some solvers in OpenFOAM able to simulate viscoelastic fluids are presented. The solvers are divided in 2 batches:
+
+1 - Evolution of the conformation matrix
+
+a) Direct application of the differential equation for the conformation matrix:
+solver: 
+b) With kernel transformation
+solver:
+
+2- Evolution of the eigen values and eigen vectors of the conformation matrix - Here various considerations have been tested.
 
 1- Collins'_method_exp - Method from "Numerical approach to simulating turbulent flow of a viscoelastic polymer solution" by T. Vaithianathan and Lance R. Collins with exponential kernel transformation
 
