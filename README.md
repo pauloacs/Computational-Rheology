@@ -35,13 +35,20 @@ solver:
 solver:
 ## 4 - Eigen Vectores extracted from deformation rate tensor
 Here an eigen decomposition is employed and the following approaches were followed:
+
    i) Numerically solving the transport equation for the eigen values
+   
      a)Oldroyd-B
+     
      b)FENE-P
+     
    ii) Application of a pseudo-analitical solution
+   
      a)Solution following the assumption: <img src="https://latex.codecogs.com/svg.image?\frac{D\Lambda&space;}{Dt}\approx&space;\frac{\partial&space;\Lambda}{\partial&space;t}" title="\frac{D\Lambda }{Dt}\approx \frac{\partial \Lambda}{\partial t}" />
 solver:
+
      b) Above solution but with explicit addition of the <img src="https://latex.codecogs.com/svg.image?(u\cdot&space;\triangledown&space;)&space;(\Lambda&space;)" title="(u\cdot \triangledown ) (\Lambda )" />
+     
 ## 5 - Direct prescription of the conformation matrix - A.
  
    i) Linear identity : 
