@@ -24,26 +24,14 @@ This whole approach was encouraged by T. Vaithianathan and Lance R. Collins in "
 
 The conformation matriz - A - is a 
 
-1- Collins'_method_exp - Method from "Numerical approach to simulating turbulent flow of a viscoelastic polymer solution" by T. Vaithianathan and Lance R. Collins with exponential kernel transformation
+## 1 - Pure implementation
 solver:
-
-2- Collins' approach
+## 2 - Kernel transformation application to the above algorithm
 solver:
-
-3- Assuming A=lambda*D with further mathematical simplifications
+## 3 - Evolution of each component of the eigen vectors
 solver:
-
-4- Using eigen decompotion on D (deformation rate tensor) to use the eigen vectors as the principal directions
-
-  i - Numerically solving principal deformations dif. equation
-   solver:
-  
-  ii - Approx analytical solution to the evolution of principal deformations
-  solver:
-    a)  ..
-    b) incremental
-
-6 - 
+## 4 - Eigen Vectores extracted from deformation rate tensor
 solver:
+## 5 - Direct presciption of the conformation matrix - A.
 
 Tutorials are presented to test every solver. 
