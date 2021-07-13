@@ -5,7 +5,7 @@ It is possible to compile most of the solvers(except the ones after II-3) by rem
 
 The solvers are divided in 2 batches:
 
-#I - Evolution of the conformation matrix 
+# I - Evolution of the conformation matrix 
 Here the Oldroyd-B constitutive model was used. 
 
 a) Direct application of the differential equation for the conformation matrix:
@@ -19,7 +19,7 @@ b) With kernel transformation
 
 solver:
 
-II- Evolution of the eigen values and eigen vectors of the conformation matrix - 
+# II- Evolution of the eigen values and eigen vectors of the conformation matrix - 
 This whole approach was encouraged by T. Vaithianathan and Lance R. Collins in "Numerical approach to simulating turbulent flow of a viscoelastic polymer solution". The proposed implementations such as various other implementations were considered. 
 
 The conformation matriz - A - is a 
