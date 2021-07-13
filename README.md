@@ -20,7 +20,8 @@ b) With kernel transformation
 solver:
 
 II- Evolution of the eigen values and eigen vectors of the conformation matrix - 
-This whole approach was encouraged by Collin's and Va in (ref). The proposed implementations such as various other implementations were considered. 
+This whole approach was encouraged by T. Vaithianathan and Lance R. Collins in "Numerical approach to simulating turbulent flow of a viscoelastic polymer solution". The proposed implementations such as various other implementations were considered. 
+
 The conformation matriz - A - is a 
 
 1- Collins'_method_exp - Method from "Numerical approach to simulating turbulent flow of a viscoelastic polymer solution" by T. Vaithianathan and Lance R. Collins with exponential kernel transformation
