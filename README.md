@@ -5,7 +5,7 @@ Here some solvers in OpenFOAM able to simulate viscoelastic fluids are presented
 1 - Evolution of the conformation matrix
 
 a) Direct application of the differential equation for the conformation matrix:
-<img src="https://bit.ly/3i7NgFw" align="center" border="0" alt=" \frac{D \Theta }{Dt} = \Omega  \Theta - \Theta  \Omega +2B+ \frac{ e^{-\Theta} - I  }{\lambda} " width="249" height="46" />
+<img src="https://latex.codecogs.com/svg.image?&space;\frac{DA}{Dt}&space;=&space;AS&space;&plus;&space;SA&space;&plus;&space;AR&space;-RA&space;-&space;\frac{A&space;-&space;I&space;}{\lambda}&space;" title=" \frac{DA}{Dt} = AS + SA + AR -RA - \frac{A - I }{\lambda} " />
 solver: 
 b) With kernel transformation
 <img src="https://latex.codecogs.com/svg.image?&space;\frac{D&space;\Theta&space;}{Dt}&space;=&space;\Omega&space;&space;\Theta&space;-&space;\Theta&space;&space;\Omega&space;&plus;2B&plus;&space;\frac{&space;e^{-\Theta}&space;-&space;I&space;&space;}{\lambda}&space;" title=" \frac{D \Theta }{Dt} = \Omega \Theta - \Theta \Omega +2B+ \frac{ e^{-\Theta} - I }{\lambda} " />
