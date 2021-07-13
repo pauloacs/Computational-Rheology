@@ -1,0 +1,10 @@
+#!/bin/sh
+
+
+blockMesh
+
+mirrorMesh -noFunctionObjects -overwrite
+
+renumberMesh -overwrite
+
+A_identity_linear
