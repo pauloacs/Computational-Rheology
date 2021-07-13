@@ -5,6 +5,7 @@ Here some solvers in OpenFOAM able to simulate viscoelastic fluids are presented
 1 - Evolution of the conformation matrix
 
 a) Direct application of the differential equation for the conformation matrix:
+[f2]: http://chart.apis.google.com/chart?cht=tx&chl=E_k=mc^2-m_0c^2
 solver: 
 b) With kernel transformation
 solver:
