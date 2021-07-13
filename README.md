@@ -1,11 +1,11 @@
 # Computational-Rheology
 
 Here some solvers in OpenFOAM able to simulate viscoelastic fluids are presented. This implementations were done in v7 of OpenFOAM. In order to use some convective schemes and boundary conditions not typically present in openFOAM, in each solver in the file Make/options some files from ... are included. 
-It is possible to compile most of the solvers by removing this, but the convective schemes in system/fvSchemes and the boundary conditions for tau_p must be changed in the tutoriais, but in order for the simulations to give the best results, rheoTool must be installed in openfoam 7. 
+It is possible to compile most of the solvers(except the ones after II-3) by removing this, but the convective schemes in system/fvSchemes and the boundary conditions for tau_p must be changed in the tutoriais, but in order for the simulations to give the best results, rheoTool must be installed in openfoam 7. 
 
 The solvers are divided in 2 batches:
 
-1 - Evolution of the conformation matrix 
+I - Evolution of the conformation matrix 
 Here the Oldroyd-B constitutive model was used. 
 
 a) Direct application of the differential equation for the conformation matrix:
@@ -19,7 +19,7 @@ b) With kernel transformation
 
 solver:
 
-2- Evolution of the eigen values and eigen vectors of the conformation matrix - 
+II- Evolution of the eigen values and eigen vectors of the conformation matrix - 
 This whole approach was encouraged by Collin's and Va in (ref). The proposed implementations such as various other implementations were considered. 
 
 1- Collins'_method_exp - Method from "Numerical approach to simulating turbulent flow of a viscoelastic polymer solution" by T. Vaithianathan and Lance R. Collins with exponential kernel transformation
