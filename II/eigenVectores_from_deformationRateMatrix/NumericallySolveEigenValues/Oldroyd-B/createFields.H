@@ -1,0 +1,205 @@
+Info<< "Reading transportProperties\n" << endl;
+
+IOdictionary transportProperties
+(
+    IOobject
+    (
+        "transportProperties",
+        runTime.constant(),
+        mesh,
+        IOobject::MUST_READ_IF_MODIFIED,
+        IOobject::NO_WRITE
+    )
+);
+
+dimensionedScalar nu
+(
+    "nu",
+    dimViscosity,
+    transportProperties.lookup("nu")
+);
+
+dimensionedScalar nu_p
+(
+    "nu_p",
+    transportProperties.lookup("nu_p")
+);
+
+dimensionedScalar lambda
+(
+    "lambda",
+    transportProperties.lookup("lambda")
+);
+
+dimensionedScalar nu_stab
+(
+    "nu_stab",
+    dimViscosity,
+    transportProperties.lookup("nu_stab")
+);
+
+
+
+
+Info<< "Reading field p\n" << endl;
+volScalarField p
+(
+    IOobject
+    (
+        "p",
+        runTime.timeName(),
+        mesh,
+        IOobject::MUST_READ,
+        IOobject::AUTO_WRITE
+    ),
+    mesh
+);
+
+
+Info<< "Reading field U\n" << endl;
+volVectorField U
+(
+    IOobject
+    (
+        "U",
+        runTime.timeName(),
+        mesh,
+        IOobject::MUST_READ,
+        IOobject::AUTO_WRITE
+    ),
+    mesh
+);
+
+volSymmTensorField tau_p
+(
+    IOobject
+    (
+        "tau_p",
+        runTime.timeName(),
+        mesh,
+        IOobject::MUST_READ,
+        IOobject::AUTO_WRITE
+    ),
+    mesh
+
+);
+
+volTensorField eigVecs_
+    (
+        IOobject
+        (
+            "eigVecs_",
+            U.time().timeName(),
+            U.mesh(),
+            IOobject::READ_IF_PRESENT,
+            IOobject::AUTO_WRITE
+        ),
+        U.mesh(),
+        dimensionedTensor
+        (
+                "I",
+                dimless,
+                pTraits<tensor>::I
+        ),
+         extrapolatedCalculatedFvPatchField<tensor>::typeName
+);
+
+volTensorField eigVals_
+    (
+        IOobject
+        (
+            "eigVals_",
+            U.time().timeName(),
+            U.mesh(),
+            IOobject::READ_IF_PRESENT,
+            IOobject::AUTO_WRITE
+        ),
+        U.mesh(),
+        dimensionedTensor
+        (
+                "I",
+                dimless,
+                pTraits<tensor>::I
+        ),
+        extrapolatedCalculatedFvPatchField<tensor>::typeName
+);
+
+volScalarField eig1
+    (
+        IOobject
+        (
+            "eig1",
+            U.time().timeName(),
+            U.mesh(),
+            IOobject::MUST_READ,
+            IOobject::AUTO_WRITE
+        ),
+        mesh
+//        dimensionedScalar("eig1", dimensionSet(0,0,0,0,0,0,0), 0)
+
+);
+
+volScalarField eig2
+    (
+        IOobject
+        (
+            "eig2",
+            U.time().timeName(),
+            U.mesh(),
+            IOobject::MUST_READ,
+            IOobject::AUTO_WRITE
+        ),
+        mesh
+        //dimensionedScalar("eig2", dimensionSet(0,0,0,0,0,0,0), 0)
+);
+volScalarField eig3
+    (
+        IOobject
+        (
+            "eig3",
+            U.time().timeName(),
+            U.mesh(),
+            IOobject::MUST_READ,
+            IOobject::AUTO_WRITE
+        ),
+        mesh
+        //dimensionedScalar("eig3", dimensionSet(0,0,0,0,0,0,0), 0)
+);
+/*
+volSymmTensorField A
+    (
+        IOobject
+        (
+            "A",
+            U.time().timeName(),
+            U.mesh(),
+            IOobject::MUST_READ,
+            IOobject::AUTO_WRITE
+        ),
+        mesh
+);
+*/
+volScalarField r_squared
+    (
+        IOobject
+        (
+            "r_squared",
+            U.time().timeName(),
+            U.mesh(),
+            IOobject::NO_READ,
+            IOobject::AUTO_WRITE
+        ),
+        mesh,
+        dimensionedScalar("r_squared", dimensionSet(0,0,0,0,0,0,0), 3.0)
+);
+
+
+
+
+#include "createPhi.H"
+
+
+label pRefCell = 0;
+scalar pRefValue = 0.0;
+setRefCell(p, mesh.solutionDict().subDict("PISO"), pRefCell, pRefValue);
+mesh.setFluxRequired(p.name());
