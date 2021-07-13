@@ -10,7 +10,7 @@ a) Direct application of the differential equation for the conformation matrix:
 solver: 
 b) With kernel transformation
 
-<img src="https://bit.ly/3i7NgFw" align="center" border="0" alt=" \frac{D \Theta }{Dt} = \Omega  \Theta - \Theta  \Omega +2B+ \frac{ e^{-\Theta}-I  }{\lambda} " width="249" height="46" />
+<img src="https://bit.ly/3i7NgFw" align="center" border="0" alt=" \frac{D \Theta }{Dt} = \Omega  \Theta - \Theta  \Omega +2B+ \frac{ e^{-\Theta} - I  }{\lambda} " width="249" height="46" />
 
 solver:
 
