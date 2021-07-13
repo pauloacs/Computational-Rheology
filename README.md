@@ -6,7 +6,7 @@ It is possible to compile most of the solvers(except the ones after II-3) by rem
 The solvers are divided in 2 batches:
 
 # I - Evolution of the conformation matrix 
-Here the Oldroyd-B constitutive model was used. 
+Here the *Oldroyd-B constitutive model* was used. 
 
 ## a) Direct application of the differential equation for the conformation matrix:
 
