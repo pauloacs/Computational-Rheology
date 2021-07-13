@@ -2,7 +2,8 @@
 
 Here some solvers in OpenFOAM able to simulate viscoelastic fluids are presented. The solvers are divided in 2 batches:
 
-1 - Evolution of the conformation matrix
+1 - Evolution of the conformation matrix 
+Here the Oldroyd-B constitutive model was used. 
 
 a) Direct application of the differential equation for the conformation matrix:
 
