@@ -1,0 +1,76 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.0                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSchemes;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+ddtSchemes                                                                 
+{
+    default         Euler; 
+}
+
+gradSchemes
+{
+    default         Gauss linear;
+    grad(U)	    Gauss linear;
+    grad(p)	    Gauss linear;
+    linExtrapGrad       Gauss linear;
+}
+
+
+divSchemes
+{
+    div(phi,U)                 			GaussDefCmpw cubista;
+    div(phi,((eigVecs_&eigVals_)&eigVecs_.T())) GaussDefCmpw cubista;
+    div((nuEff*dev2(T(grad(U))))) 		Gauss linear;
+    div(tau_p)					Gauss linear;
+    div(grad(U))				Gauss linear;
+    div(phi,eig1)                               GaussDefCmpw cubista;
+    div(phi,eig2)                               GaussDefCmpw cubista;
+    div(phi,eig3)				GaussDefCmpw cubista;
+    div(phi,v11)				GaussDefCmpw cubista;
+    div(phi,v22)				GaussDefCmpw cubista;
+    div(phi,v21)				GaussDefCmpw cubista;
+    div(phi,v12)                                GaussDefCmpw cubista;
+    div(grad(v21))  				Gauss linear;
+    div(grad(v11))                              Gauss linear;
+    div(grad(v22))                              Gauss linear;
+    div(grad(v12))                              Gauss linear;
+
+
+
+}
+
+laplacianSchemes
+{
+    default		    Gauss linear orthogonal;         
+    laplacian(U)	    Gauss linear orthogonal;
+}
+
+interpolationSchemes
+{
+    default         linear;
+}
+
+snGradSchemes
+{
+    default         orthogonal;//orthogonal
+}
+fluxRequired
+{
+    default	no;
+    p		;
+}
+
+// ************************************************************************* //
