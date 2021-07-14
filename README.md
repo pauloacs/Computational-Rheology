@@ -34,7 +34,7 @@ solver:
 
 solver:
 ## 4 - Eigen Vectores extracted from deformation rate tensor
-Here an eigen decomposition is employed and the following approaches were followed:
+Here an eigen decomposition method is employed and the following approaches were followed:
 
    i) Numerically solving the transport equation for the eigen values
    
