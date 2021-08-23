@@ -64,3 +64,6 @@ solver:
     <img src="https://latex.codecogs.com/svg.image?&space;A=2&space;\lambda&space;D&space;&plus;&space;(5\lambda)^{2}(u\cdot&space;\triangledown&space;)(D)" title=" A=2 \lambda D + (5\lambda)^{2}(u\cdot \triangledown )(D)" />
 
 Tutorials are presented to test every solver. 
+
+
+## Conclusions:
